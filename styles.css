@@ -372,8 +372,17 @@ audio::-webkit-media-controls-enclosure {
     overflow-y: auto;
     flex-wrap: wrap;
     height: 600px;
+    
   }
 
+
+  #playlists .scroll div, #curated .scroll div{
+    background-color: unset;
+    position: unset;
+    top: unset;
+    height: unset;
+    width: unset;
+  }
   #playlists .scroll section, #curated .scroll section{
     width: 100%;
     display: grid;
