@@ -115,7 +115,7 @@ input:checked ~ label:not(.steps) span:after {
 }
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(8, 1fr);
   padding-top: 65px;
   background-image: linear-gradient(
     to right,
@@ -131,24 +131,29 @@ header h1 {
   color: #ffffff;
   grid-column-start: 2;
   grid-column-end: 6;
+  font-size: 20px;
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 header p {
+  font-family: raleway, sans-serif;
   color: #ffffff;
   grid-column-start: 2;
   grid-column-end: 8;
   padding-bottom: 10px;
 }
 
-#trending {
-  height: 450px;
-}
 #trending h2,
 #playlists h2,
 #curated h2 {
   padding-top: 20px;
   padding-left: 20px;
   color: #590242;
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 section {
@@ -181,8 +186,16 @@ dl {
 
 dt {
   padding-right: 5px;
+  font-family: "raleway", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
+dd {
+  font-family: "raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 audio {
   position: absolute;
   bottom: 150px;
@@ -197,6 +210,9 @@ button {
   border-radius: 5px;
   margin-top: 20px;
   margin-left: 40px;
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 #playlists {
@@ -212,7 +228,8 @@ button {
   height: 250px;
 }
 
-#playlists .scroll div, #curated .scroll div{
+#playlists .scroll div,
+#curated .scroll div {
   position: relative;
   background-color: unset;
   top: unset;
@@ -225,8 +242,11 @@ button {
 }
 #playlists h3,
 #curated h3 {
-  font-weight: bold;
   text-transform: uppercase;
+  font-size: 16px;
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 #playlists h3,
 #playlists p,
@@ -236,6 +256,12 @@ button {
   text-align: center;
 }
 
+#playlists p,
+#curated p {
+  font-family: "raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 #curated div.scroll {
   background-color: #020873;
 }
@@ -254,6 +280,16 @@ footer p {
   text-align: center;
   padding-top: 80px;
   padding-bottom: 10px;
+  font-size: 10px;
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#trending h3 {
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 audio::-webkit-media-controls-mute-button {
   background-color: #ffffff;
@@ -302,9 +338,9 @@ audio::-webkit-media-controls-enclosure {
   background: #ffffff;
 }
 @media screen and (min-width: 834px) {
-    nav{
-        width: 834px;
-    }
+  nav {
+    width: 834px;
+  }
   nav a:hover {
     background: #590242;
   }
@@ -348,74 +384,76 @@ audio::-webkit-media-controls-enclosure {
     grid-template-rows: auto auto 1fr;
   }
 
-  button{
+  button {
     justify-self: end;
     margin-right: 10px;
   }
 
- main{
+  main {
     display: grid;
     grid-template-columns: 1fr 1fr;
- }
+  }
 
- main #trending{
+  main #trending {
     grid-column-start: 1;
     grid-column-end: 3;
- }
- main #playlists, main #curated{
+  }
+  main #playlists,
+  main #curated {
     grid-row-start: 2;
     grid-template-columns: 1fr;
- }
+  }
 
- #playlists{
+  #playlists {
     padding-top: unset;
- }
- #playlists h2{
+  }
+  #playlists h2 {
     padding-bottom: 0;
- }
- #playlists .scroll, #curated .scroll {
+  }
+  #playlists .scroll,
+  #curated .scroll {
     display: flex;
     width: 417px;
     overflow-x: hidden;
     overflow-y: auto;
     flex-wrap: wrap;
     height: 600px;
-    
   }
 
-
-  #playlists .scroll div, #curated .scroll div{
+  #playlists .scroll div,
+  #curated .scroll div {
     background-color: unset;
     position: unset;
     top: unset;
     height: unset;
     width: unset;
   }
-  #playlists .scroll section, #curated .scroll section{
+  #playlists .scroll section,
+  #curated .scroll section {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  #playlists .scroll section img, #curated .scroll section img{
+  #playlists .scroll section img,
+  #curated .scroll section img {
     grid-column-start: 1;
     grid-column-end: 2;
-  } 
-  #playlists .playlists-text{
+  }
+  #playlists .playlists-text {
     grid-column-start: 2;
     grid-column-end: 3;
   }
 
-
-  .playlists-text p, .playlists-text h3{
+  .playlists-text p,
+  .playlists-text h3 {
     padding-top: 10px;
   }
-  #curated div.scroll section, #playlists div.scroll section {
+  #curated div.scroll section,
+  #playlists div.scroll section {
     height: 170px;
   }
 
-
-
-  footer p{
+  footer p {
     padding-top: 50px;
   }
 }
