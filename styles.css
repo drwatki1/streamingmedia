@@ -211,6 +211,14 @@ button {
   background-color: #0d8dfb;
   height: 250px;
 }
+
+#playlists .scroll div, #curated .scroll div{
+  position: relative;
+  background-color: unset;
+  top: unset;
+  height: unset;
+  width: unset;
+}
 #playlists h2 {
   background-color: #ffffff;
   padding-bottom: 10px;
